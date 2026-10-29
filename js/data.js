@@ -1,7 +1,16 @@
 /* Conteúdo do site. Edite aqui para trocar produtos, preços e contato. */
 window.DG = {
+  /* WhatsApp da loja. Use DDI 55 + DDD + número, sem espaços ou símbolos. */
   phone: "5588994828085",
   phoneLabel: "(88) 99482-8085",
+
+  /* Empresa que desenvolveu o site (aparece no rodapé) */
+  dev: {
+    name: "José Pedro Santiago da Silva",
+    phone: "5588988039478",
+    phoneLabel: "(88) 98803-9478",
+    message: "Olá! Vi o site da DG Store e gostaria de um orçamento para o meu próprio site."
+  },
 
   categories: [
     { slug: "fones-de-ouvido", name: "Fones de ouvido", img: "c-fones.jpg", desc: "Fones e headsets com ótimo som para o dia a dia e para jogar." },

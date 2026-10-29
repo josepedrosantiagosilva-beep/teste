@@ -24,6 +24,7 @@
   --grad-b: #8b3cf6;
   --header-bg: rgba(7, 7, 13, .94);
   --footer-bg: #05050a;
+  --glow: rgba(109, 40, 217, .28);
 }
 
 /* ===== Tema claro ===== */
@@ -41,6 +42,7 @@
   --grad-b: #6d28d9;
   --header-bg: rgba(255, 255, 255, .92);
   --footer-bg: #ffffff;
+  --glow: rgba(139, 60, 246, .14);
 }
 .on-dark { color: var(--text); }
 

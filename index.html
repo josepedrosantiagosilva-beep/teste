@@ -23,7 +23,7 @@
 <main>
   <!-- 1. Hero -->
   <div class="intro screen">
-  <section class="hero on-dark" id="inicio">
+  <section class="hero" id="inicio">
     <div class="container hero__inner">
       <div class="hero__content">
         <p class="eyebrow">DG Store | Eletrônicos</p>
@@ -87,7 +87,12 @@
           <p>Produtos originais, com garantia e entrega rápida para você aproveitar o que há de melhor.</p>
           <a href="#produtos" class="btn btn--primary btn--sm">Ver produtos <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
-        <div class="promo__media"><img src="assets/img/banner.jpg" alt="Smartphone, fones e smartwatch" loading="lazy"></div>
+        <div class="promo__media">
+          <picture>
+            <source media="(max-width: 899px)" srcset="assets/img/banner-m.jpg">
+            <img src="assets/img/banner.jpg" alt="Smartphone, fones e smartwatch" loading="lazy">
+          </picture>
+        </div>
       </div>
     </div>
   </section>

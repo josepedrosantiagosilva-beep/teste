@@ -101,6 +101,8 @@
 .theme-toggle .icon-moon { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
-/* Logo (branco) escurece no tema claro mantendo o roxo */
-:root[data-theme="light"] .logo-img { filter: invert(1) hue-rotate(180deg); }
+/* Dois logos: o claro escurece o D e o STORE mantendo o G roxo */
+.logo-img--light { display: none; }
+:root[data-theme="light"] .logo-img--dark { display: none; }
+:root[data-theme="light"] .logo-img--light { display: block; }
 .burger span { background: var(--text); }

@@ -24,7 +24,12 @@
 
   const categoryCard = (c) => `
     <a href="${c.slug}.html" class="card category">
-      <div class="card__img"><img src="${IMG + c.img}" alt="${c.name}" loading="lazy"></div>
+      <div class="card__img">
+        <picture>
+          <source media="(max-width: 599px)" srcset="${IMG + c.img.replace(".jpg", "-h.jpg")}">
+          <img src="${IMG + c.img}" alt="${c.name}" loading="lazy">
+        </picture>
+      </div>
       <div class="category__body">
         <span class="category__name">${c.name}</span>
         <span class="link-arrow">Ver produtos ${ARROW}</span>

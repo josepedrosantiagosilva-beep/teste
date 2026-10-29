@@ -20,7 +20,8 @@
 <header class="header">
   <div class="container header__inner">
     <a href="index.html#inicio" class="logo" aria-label="DG Store - início">
-      <img class="logo-img" src="assets/img/logo.png" alt="DG Store" width="64" height="38">
+      <img class="logo-img logo-img--dark" src="assets/img/logo.png" alt="DG Store" width="64" height="38">
+      <img class="logo-img logo-img--light" src="assets/img/logo-light.png" alt="" width="64" height="38" aria-hidden="true">
     </a>
     <div class="header__menu" id="menu">
       <nav class="nav" aria-label="Principal">
@@ -55,7 +56,8 @@
 <footer class="footer" id="contato">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <img class="logo-img" src="assets/img/logo.png" alt="DG Store" width="64" height="38">
+      <img class="logo-img logo-img--dark" src="assets/img/logo.png" alt="DG Store" width="64" height="38">
+      <img class="logo-img logo-img--light" src="assets/img/logo-light.png" alt="" width="64" height="38" aria-hidden="true">
       <p>Tecnologia ao seu alcance.</p>
     </div>
     <div class="footer__col">
@@ -77,9 +79,9 @@
       <div>
         <h3>Quer ter o seu próprio site?</h3>
         <p>Desenvolvimento de sites personalizados para o seu negócio.</p>
-        <small>Developer by<br><a href="#" data-wa>José Pedro Santiago da Silva</a></small>
+        <small>Developer by<br><a href="#" data-wa-dev>${DG.dev.name}</a></small>
       </div>
-      <a href="#" class="btn btn--primary" data-wa>Fale conosco</a>
+      <a href="#" class="btn btn--primary" data-wa-dev>Fale conosco</a>
     </div>
   </div>
   <div class="footer__bottom">
@@ -115,10 +117,8 @@
   put("app-header", header);
   put("app-footer", footer);
 
-  /* Links gerais de WhatsApp (data-wa) */
-  DG.$$("[data-wa]").forEach((el) => {
-    el.href = DG.waLink();
-    el.target = "_blank";
-    el.rel = "noopener";
-  });
+  /* Links de WhatsApp: data-wa = loja, data-wa-dev = empresa que fez o site */
+  const link = (el, href) => { el.href = href; el.target = "_blank"; el.rel = "noopener"; };
+  DG.$$("[data-wa]").forEach((el) => link(el, DG.waLink()));
+  DG.$$("[data-wa-dev]").forEach((el) => link(el, DG.waLink(DG.dev.message, DG.dev.phone)));
 })(window.DG);
