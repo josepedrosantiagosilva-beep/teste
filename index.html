@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DG Store | Tecnologia ao seu alcance</title>
+  <meta name="description" content="Os melhores eletrônicos com qualidade, preço justo e entrega rápida em Quixeramobim.">
+  <meta name="theme-color" content="#07070d">
+  <script src="js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="home">
+<div id="app-header"></div>
+
+<main>
+  <!-- 1. Hero -->
+  <div class="intro screen">
+  <section class="hero on-dark" id="inicio">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow">DG Store | Eletrônicos</p>
+        <h1>Tecnologia ao <span class="grad">seu alcance.</span></h1>
+        <p class="hero__text">Aqui você encontra os melhores eletrônicos, com qualidade, preço justo e entrega rápida em Quixeramobim.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--primary" data-wa><svg class="icon"><use href="#i-wa"/></svg>Comprar pelo WhatsApp<svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a href="#produtos" class="link-arrow">Ver produtos <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="hero__media"><img src="assets/img/hero.jpg" alt="Caixa de som JBL e fones de ouvido sem fio"></div>
+    </div>
+  </section>
+
+  <!-- 2. Diferenciais -->
+  <section class="features">
+    <ul class="container features__list">
+      <li><svg class="icon icon--xl"><use href="#i-truck"/></svg><div><strong>Entrega rápida</strong><span>Receba em Quixeramobim e região.</span></div></li>
+      <li><svg class="icon icon--xl"><use href="#i-shield"/></svg><div><strong>Compra segura</strong><span>Seus dados protegidos.</span></div></li>
+      <li><svg class="icon icon--xl"><use href="#i-headset"/></svg><div><strong>Atendimento direto</strong><span>Fale pelo WhatsApp.</span></div></li>
+      <li><svg class="icon icon--xl"><use href="#i-star"/></svg><div><strong>Produtos de qualidade</strong><span>As melhores marcas e variedades.</span></div></li>
+    </ul>
+  </section>
+  </div>
+
+  <!-- 3. Mais procurados -->
+  <section class="section screen" id="produtos">
+    <div class="container">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Produtos em destaque</p>
+          <h2>Os mais <span class="grad">procurados</span></h2>
+        </div>
+        <a href="#categorias" class="link-arrow link-arrow--sm">Ver todos os produtos <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </header>
+      <div class="grid grid--products" id="productGrid"></div>
+      <p class="empty" id="emptyMsg" hidden>Nenhum produto encontrado para sua busca.</p>
+    </div>
+  </section>
+
+  <!-- 4. Categorias -->
+  <section class="section screen" id="categorias">
+    <div class="container">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Categorias</p>
+          <h2>Explore por <span class="grad">categoria</span></h2>
+        </div>
+      </header>
+      <div class="grid grid--categories" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- 5. Banner -->
+  <section class="section screen" id="sobre">
+    <div class="container">
+      <div class="promo on-dark">
+        <div class="promo__content">
+          <p class="eyebrow eyebrow--plain">Qualidade e tecnologia</p>
+          <h2>A melhor experiência <span class="grad">em eletrônicos.</span></h2>
+          <p>Produtos originais, com garantia e entrega rápida para você aproveitar o que há de melhor.</p>
+          <a href="#produtos" class="btn btn--primary btn--sm">Ver produtos <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="promo__media"><img src="assets/img/banner.jpg" alt="Smartphone, fones e smartwatch" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Depoimentos -->
+  <section class="section screen">
+    <div class="container">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Depoimentos</p>
+          <h2>O que dizem nossos <span class="grad">clientes</span></h2>
+        </div>
+        <a href="#" class="link-arrow link-arrow--sm" data-wa>Ver mais avaliações <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </header>
+      <div class="grid grid--reviews" id="reviewGrid"></div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/cart-ui.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

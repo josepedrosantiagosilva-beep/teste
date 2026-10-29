@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Acessórios | DG Store</title>
+  <meta name="theme-color" content="#07070d">
+  <script src="js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body data-category="acessorios">
+<div id="app-header"></div>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Você está em">
+        <a href="index.html">Início</a><span>/</span><span id="catName">Acessórios</span>
+      </nav>
+      <p class="eyebrow">Categoria</p>
+      <h1 id="catTitle">Acessórios</h1>
+      <p class="page-head__desc" id="catDesc"></p>
+    </div>
+  </section>
+
+  <section class="section" id="produtos">
+    <div class="container">
+      <div class="grid grid--products" id="productGrid"></div>
+      <p class="empty" id="emptyMsg" hidden>Nenhum produto encontrado.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Continue explorando</p>
+          <h2>Outras <span class="grad">categorias</span></h2>
+        </div>
+      </header>
+      <div class="grid grid--categories" id="categoryGrid"></div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/cart-ui.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

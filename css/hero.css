@@ -1,0 +1,221 @@
+/* ===== Mobile: hero + diferenciais formam uma única tela escura ===== */
+.intro {
+  background: radial-gradient(ellipse 90% 40% at 50% 55%, rgba(109, 40, 217, .28), transparent 70%), #07070d;
+  border-bottom: 1px solid var(--border);
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Degradê atrás do texto para manter a leitura sobre a imagem */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(7, 7, 13, .9) 0%, rgba(7, 7, 13, .6) 50%, transparent 85%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 9vw, 2.6rem);
+  font-weight: 800;
+}
+
+.hero__text {
+  max-width: 380px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+/* Imagem de fundo: ancorada na base do hero, atrás do texto, com a proporção original (594x304) */
+.hero__media {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 150%;
+  aspect-ratio: 594 / 304;
+  transform: translateX(-46%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 40%);
+  mask-image: linear-gradient(to bottom, transparent, #000 40%);
+}
+
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Diferenciais: 4 cartões compactos (2x2) dentro do hero */
+.features__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding-bottom: 14px;
+  margin-top: 16px;
+}
+
+.features__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: var(--radius);
+}
+
+.features__list .icon--xl {
+  width: 24px;
+  height: 24px;
+}
+
+.features__list strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #fff;
+}
+
+.features__list span {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: #b4b4c8;
+}
+
+/* ===== Desktop: hero com imagem à direita e faixa de diferenciais abaixo ===== */
+@media (min-width: 900px) {
+  .intro {
+    background: none;
+    color: inherit;
+    border-bottom: 0;
+  }
+
+  .hero {
+    display: block;
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(ellipse 50% 90% at 75% 40%, rgba(109, 40, 217, .22), transparent 70%), var(--bg);
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero__inner {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    min-height: 420px;
+  }
+
+  .hero__content {
+    max-width: 460px;
+    max-width: 460px;
+    padding-top: 120px;
+    padding-bottom: 56px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1 {
+    margin-bottom: 22px;
+    font-size: clamp(2.8rem, 4.6vw, 3.4rem);
+  }
+
+  .hero__text {
+    margin-bottom: 30px;
+  }
+
+  .hero__media {  
+    position: absolute;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+    width: min(62%, 720px);
+    left: auto;
+    transform: none;
+    aspect-ratio: auto;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 28%, #000 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 28%, #000 85%, transparent);
+  }
+
+  .features {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .features__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding-bottom: 0;
+
+  }
+
+  .features__list li {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 20px;
+    background: none;
+    border: 0;
+    border-right: 1px solid var(--border);
+    border-radius: 0;
+  }
+
+  .features__list li:first-child {
+    padding-left: 0;
+  }
+
+  .features__list li:last-child {
+    border-right: 0;
+  }
+
+  .features__list .icon--xl {
+    width: 40px;
+    height: 40px;
+  }
+
+  .features__list strong {
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .features__list span {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+}
