@@ -14,14 +14,7 @@
 }
 
 /* Degradê atrás do texto para manter a leitura sobre a imagem */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(to bottom, rgba(7, 7, 13, .9) 0%, rgba(7, 7, 13, .6) 50%, transparent 85%);
-  pointer-events: none;
-}
+
 
 .hero__inner {
   flex: 1;
