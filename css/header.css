@@ -3,7 +3,6 @@
   top: 0;
   z-index: 50;
   background: var(--header-bg);
-  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 .header__inner { display: flex; align-items: center; min-height: var(--header-h); }
@@ -44,15 +43,15 @@
   color: var(--muted);
 }
 .search:focus-within { border-color: var(--purple); }
-.search input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; font-size: 0.85rem; color: var(--text); }
+.search input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; font-size: 1rem; color: var(--text); }
 .search input::placeholder { color: var(--muted); }
 
-.header__actions { display: flex; align-items: center; gap: 20px; margin-left: auto; }
-.icon-btn { position: relative; display: grid; place-items: center; transition: color .2s; }
+.header__actions { display: flex; align-items: center; gap: 2px; margin-left: auto; margin-right: -8px; }
+.icon-btn { position: relative; display: grid; place-items: center; min-width: 44px; min-height: 44px; transition: color .2s; }
 .icon-btn:hover { color: var(--purple-light); }
 .cart__badge {
   position: absolute;
-  top: -8px; right: -10px;
+  top: 3px; right: 1px;
   display: grid; place-items: center;
   min-width: 18px; height: 18px; padding: 0 4px;
   background: var(--purple);
@@ -62,7 +61,7 @@
 }
 
 /* Hambúrguer */
-.burger { display: flex; flex-direction: column; justify-content: space-between; width: 26px; height: 20px; }
+.burger { display: flex; flex-direction: column; justify-content: space-between; width: 44px; height: 44px; padding: 12px 9px; }
 .burger span { height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s, opacity .25s; }
 .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
 .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -94,7 +93,9 @@
     background: var(--purple);
   }
   .search { width: 100%; max-width: 290px; margin-left: auto; padding: 11px 16px; }
-  .header__actions { margin-left: 0; gap: 22px; }
+  .header { backdrop-filter: blur(12px); }
+  .header__actions { margin-left: 0; margin-right: -8px; gap: 8px; }
+  .search input { font-size: 0.85rem; }
 }
 
 /* ===== Botão de tema: mostra o sol no escuro e a lua no claro ===== */

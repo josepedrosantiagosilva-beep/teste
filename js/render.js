@@ -9,7 +9,7 @@
       <div class="card__img">
         <picture>
           <source media="(max-width: 599px)" srcset="${IMG + p.img.replace(".jpg", "-sq.jpg")}">
-          <img src="${IMG + p.img}" alt="${p.name}" loading="lazy">
+          <img src="${IMG + p.img}" alt="${p.name}" loading="lazy" decoding="async">
         </picture>
       </div>
       <div class="product__body">
@@ -27,7 +27,8 @@
       <div class="card__img">
         <picture>
           <source media="(max-width: 599px)" srcset="${IMG + c.img.replace(".jpg", "-h.jpg")}">
-          <img src="${IMG + c.img}" alt="${c.name}" loading="lazy">
+          <img src="${IMG + c.img}" alt="${c.name}" loading="lazy" decoding="async">
+
         </picture>
       </div>
       <div class="category__body">
@@ -39,7 +40,7 @@
   const reviewCard = (r) => `
     <article class="card review">
       <div class="review__head">
-        <img src="${IMG + r.img}" alt="${r.name}" loading="lazy">
+        <img src="${IMG + r.img}" alt="${r.name}" loading="lazy" decoding="async">
         <div>
           <span class="review__name">${r.name}</span>
           <span class="review__stars" aria-label="5 estrelas">★★★★★</span>

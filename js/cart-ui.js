@@ -12,11 +12,16 @@
   let toastTimer;
 
   /* Abrir e fechar */
+  let lastFocus = null;
   const setOpen = (open) => {
+    if (!open && !drawer.classList.contains("is-open")) return;
+    if (open) lastFocus = document.activeElement;
     drawer.classList.toggle("is-open", open);
     overlay.classList.toggle("is-open", open);
     drawer.setAttribute("aria-hidden", String(!open));
     document.body.classList.toggle("no-scroll", open);
+    if (open) $("[data-cart-close]", drawer).focus({ preventScroll: true });
+    else if (lastFocus) lastFocus.focus({ preventScroll: true });
   };
   $$("[data-cart-open]").forEach((b) => b.addEventListener("click", () => setOpen(true)));
   $$("[data-cart-close]").forEach((b) => b.addEventListener("click", () => setOpen(false)));

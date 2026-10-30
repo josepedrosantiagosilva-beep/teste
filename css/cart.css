@@ -42,7 +42,7 @@
 .cart-item__price { display: block; margin: 2px 0 8px; font-size: 0.88rem; font-weight: 700; color: var(--purple-light); }
 
 .qty { display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 6px; }
-.qty button { width: 32px; height: 30px; font-size: 1.1rem; transition: color .2s; }
+.qty button { width: 40px; height: 38px; font-size: 1.1rem; transition: color .2s; }
 .qty button:hover { color: var(--purple-light); }
 .qty span { min-width: 28px; text-align: center; font-size: 0.85rem; font-weight: 600; }
 
@@ -60,7 +60,7 @@
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 0.88rem;
+  font-size: 1rem;
   outline: 0;
 }
 .field input:focus { border-color: var(--purple); }
